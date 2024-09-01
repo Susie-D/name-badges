@@ -1,4 +1,10 @@
-const NameBadge = ({ name }: { name: string }): JSX.Element => {
+const NameBadge = ({
+  name,
+  greeting,
+}: {
+  name: string;
+  greeting: string;
+}): JSX.Element => {
   return (
     <section className="badge">
       <header className="badge-header">
@@ -6,6 +12,7 @@ const NameBadge = ({ name }: { name: string }): JSX.Element => {
         <p>My name is…</p>
       </header>
       <div className="badge-body">
+        <div className="badge-greeting">{greeting}</div>
         <p className="badge-name">{name}</p>
       </div>
       <footer className="badge-footer" />
