@@ -1,10 +1,10 @@
-const NameBadge = ({
-  name,
-  greeting,
-}: {
-  name: string;
-  greeting: string;
-}): JSX.Element => {
+type NameBadgeProps = {
+  name: string, 
+  greeting?: string
+}
+
+
+const NameBadge = (props: NameBadgeProps) => {
   return (
     <section className="badge">
       <header className="badge-header">
@@ -12,8 +12,8 @@ const NameBadge = ({
         <p>My name is…</p>
       </header>
       <div className="badge-body">
-        <div className="badge-greeting">{greeting}</div>
-        <p className="badge-name">{name}</p>
+        <div className="badge-greeting">{props.greeting}</div>
+        <p className="badge-name">{props.name}</p>
       </div>
       <footer className="badge-footer" />
     </section>
